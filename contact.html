@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mon Projet Rubik's Cube</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRE DE NAVIGATION (Identique à vos autres pages) -->
+    <nav class="menu-navigation">
+        <a href="index.html" class="lien-menu">Accueil</a>
+        <div class="onglet-deroulant">
+            <button class="bouton-deroulant">Mes Pages ▾</button>
+            <div class="liste-liens">
+                <a href="page1.html">Mon parcours</a>
+                <a href="en-construction.html">projet 2 (Bientôt)</a>
+                <a href="en-construction.html">projet 3 (Bientôt)</a>
+                <a href="en-construction.html">Le Coin Rubik's</a>
+            </div>
+        </div>
+        <a href="contact.html" class="lien-menu">Contact</a>
+    </nav>
+
+    <!-- CONTENEUR PRINCIPAL DE LA PAGE -->
+    <main class="conteneur-contact">
+
+        <header class="section-introduction">
+            <h1>Contact & Communauté</h1>
+            <p class="sous-titre">Une question sur un algorithme ? Envie de partager vos temps de résolution ? Écrivez-moi !</p>
+        </header>
+
+<!-- 1. MODIFICATION DE LA LIGNE FORM (On remplace action="#" par le lien Web3Forms.com) -->
+
+        <div class="grille-contact">
+            
+            <!-- COLONNE 1 : LE FORMULAIRE DE CONTACT -->
+            <section class="bloc-formulaire">
+                <h2>Envoyer un message</h2>
+                <form action="#" method="POST" class="formulaire-contact">
+
+             <!-- 2. AJOUT DE VOTRE CLÉ CACHÉE (À coller juste ici, en haut à l'intérieur du formulaire) -->
+    <input type="hidden" name="access_key" value="COLLER_ICI_VOTRE_CLE_REÇUE_PAR_MAIL">                 
+
+                    <div class="champ">
+                        <label for="nom">Votre Nom / Pseudo :</label>
+                        <input type="text" id="nom" name="nom" placeholder="Ex: Nadia" required>
+                    </div>
+
+                    <div class="champ">
+                        <label for="email">Votre Adresse Email :</label>
+                        <input type="email" id="email" name="email" placeholder="Ex: nadia@example.com" required>
+                    </div>
+
+                    <div class="champ">
+                        <label for="sujet">Sujet du message :</label>
+                        <select id="sujet" name="sujet">
+                            <option value="question">Question sur une méthode</option>
+                            <option value="bug">Problème d'affichage du cube</option>
+                            <option value="partenariat">Proposition de projet / Défi</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+
+                    <div class="champ">
+                        <label for="message">Votre Message :</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message ici..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="bouton-envoi">Envoyer le message ✉</button>
+                </form>
+            </section>
+
+            <!-- COLONNE 2 : INFOS, RÉSEAUX ET RÉFÉRENCES -->
+            <aside class="bloc-infos-externes">
+                
+                <!-- COORDONNÉES & RÉSEAUX -->
+                <div class="sous-bloc">
+                    <h2>Mes Réseaux & Infos</h2>
+                    <p><strong>Email direct :</strong> contact@votre-site.com</p>
+                    <p><strong>Localisation :</strong> France / Belgique (Disponible en ligne)</p>
+                    
+                    <div class="reseaux-sociaux">
+                        <a href="https://youtube.com" target="_blank" class="bouton-reseau yt">YouTube</a>
+                        <a href="https://instagram.com" target="_blank" class="bouton-reseau ig">Instagram</a>
+                        <a href="https://github.com" target="_blank" class="bouton-reseau gh">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- LIENS VERS VOS PAGES MAISON -->
+                <div class="sous-bloc">
+                    <h2>Navigation rapide</h2>
+                    <p>Retournez rapidement sur vos ateliers pratiques :</p>
+                    <ul class="liens-internes-liste">
+                        <li><a href="index.html" class="lien-texte">Retour à la page d'accueil</a></li>
+                        <li><a href="page3.html" class="lien-texte">S'entraîner avec la méthode débutant</a></li>
+                    </ul>
+                </div>
+
+                <!-- SITES DE RÉFÉRENCE MONDIAUX -->
+                <div class="sous-bloc">
+                    <h2>Liens Utiles & Références</h2>
+                    <p>Les organisations officielles du monde du Speedcubing :</p>
+                    <ul class="liens-externes-liste">
+                        <li><a href="https://worldcubeassociation.org" target="_blank" class="lien-texte">WCA (World Cube Association)</a> - Classements mondiaux officiels.</li>
+                        <li><a href="https://cubeskills.com" target="_blank" class="lien-texte">CubeSkills</a> - Tutoriels vidéos de champions.</li>
+                        <li><a href="https://algdb.net" target="_blank" class="lien-texte">AlgDB</a> - Base de données complète de tous les algorithmes.</li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+
+    </main>
+
+    <!-- PIED DE PAGE GOOGLE IA (Identique partout) -->
+    <footer class="pied-de-page">
+        <p>Site réalisé en collaboration avec l'IA de Google.</p>
+    </footer>
+
+</body>
+</html>

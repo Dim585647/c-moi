@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Parcours & Projets - Portfolio</title>
+    <!-- FORMATION : Ce lien permet à la page de récupérer le menu et les styles généraux -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRE DE NAVIGATION (Identique à votre Accueil et Contact pour garder le menu fluide) -->
+    <nav class="menu-navigation">
+        <a href="index.html" class="lien-menu">Accueil</a>
+        <div class="onglet-deroulant">
+            <button class="bouton-deroulant">Mes Pages ▾</button>
+            <div class="liste-liens">
+                <a href="page1.html">Mon Parcours</a>
+                <a href="en-construction.html">Projet 2 (Bientôt)</a>
+                <a href="en-construction.html">Projet 3 (Bientôt)</a>
+                <a href="en-construction.html">Le Coin Rubik's</a>
+            </div>
+        </div>
+        <a href="contact.html" class="lien-menu">Contact</a>
+    </nav>
+
+    <!-- CONTENEUR DU PORTFOLIO : Limite la largeur de lecture sur ordinateur -->
+    <main class="conteneur-portfolio">
+
+        <!-- EN-TÊTE DE LA PAGE -->
+        <header class="introduction-portfolio">
+            <h1>Mes Passions & Mes Projets </h1>
+            <p class="sous-titre-portfolio">Découvrez les coulisses de mes idées et créations et ce qui m'anime au quotidien.</p>
+        </header>
+
+        <!-- SUJET N°1 : EXEMPLE DE PROJET INFORMATIQUE OU PROFESSIONNEL -->
+        <section class="sujet-bloc">
+            <h2>Sujet 1 : Le Développement de ce Site Web</h2>
+            <p>FORMATION : Utilisez la balise &lt;p&gt; pour chaque paragraphe. Évitez de faire de très longs blocs de texte, séparez vos idées pour que la lecture soit agréable sur un écran Android.</p>
+            <p>Ici, vous décrirez par exemple comment vous avez appris à structurer le HTML, à dompter le responsive CSS, et la fierté d'exposer votre travail de manière autonome sur GitHub Pages.</p>
+            
+            <!-- FORMATION CACHÉE : Zone d'image réservée. Pour l'activer plus tard, enlevez les code qui le cache au début et à la fin -->
+            <!-- 
+            <div class="media-reserve">
+                <img src="images/projet1.jpg" alt="Aperçu de mon premier projet web" loading="lazy">
+                <p class="legende-media">Légende : Capture d'écran de l'évolution de mon code CSS</p>
+            </div>
+            -->
+        </section>
+
+        <!-- SUJET N°2 : COMPÉTENCES OU PASSION (Ex: Électronique, Design, etc.) -->
+        <section class="sujet-bloc">
+            <h2>Sujet 2 : Mes Compétences Techniques & CV</h2>
+            <p>Dans ce paragraphe, listez ce que vous savez faire. Vous pouvez expliquer votre logique d'organisation, votre méthodologie de travail, ou votre capacité à surmonter les blocages techniques (comme la gestion des conflits CSS !).</p>
+            <p>N'hésitez pas à enrichir cette section avec une liste à puces pour énumérer vos atouts professionnels majeurs.</p>
+            
+            <ul class="liste-competences">
+                <li><strong>Autonomie :</strong> Capacité à chercher, tester et corriger des structures complexes.</li>
+                <li><strong>Gestion de projet :</strong> Création d'un plan d'évolution du site étape par étape.</li>
+                <li><strong>Outils maîtrisés :</strong> Git, GitHub, Éditeurs de code modernes.</li>
+            </ul>
+
+            <!-- FORMATION CACHÉE : Zone de vidéo réservée (Lien YouTube ou fichier local). Enlevez les commentaires pour l'activer -->
+            
+           <!-- INTEGRATION YOUTUBE CORRIGÉE -->
+<div class="media-reserve">
+    <div class="video-conteneur">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pd7w0pKPnmU?si=jiMmu1A_qOYmQxzL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="legende-media">Légende : Démonstration vidéo de mon projet en action</p>
+</div>
+
+            
+        </section>
+
+        <!-- SUJET N°3 : PASSERELLE VERS LE MONDE DU CUBE (VOTRE LIEN DE CONNEXION) -->
+        <section class="sujet-bloc">
+            <h2>Sujet 3 : La Passion du Rubik's Cube</h2>
+            <p>Le Rubik's cube n'est pas qu'un simple jeu mécanique, c'est une gymnastique algorithmique qui demande de la rigueur et de la mémoire. C'est le parfait pont entre la logique mathématique et la programmation.</p>
+            
+            <!-- FORMATION : Ce bouton utilise la classe "bouton-passerelle" pour inviter le visiteur à cliquer -->
+            <div class="zone-action">
+                <a href="en-construction.html" class="bouton-passerelle">Découvrir mon laboratoire Rubik's Cube ➜</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIED DE PAGE PARTAGÉ -->
+    <footer class="pied-de-page">
+        <p>Site réalisé en collaboration avec l'IA de Google.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,500 @@
+
+/* BARRE DE NAVIGATION PRINCIPALE */
+.menu-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #2d3748; /* Gris anthracite */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 100; /* Permet au menu de s'ouvrir PAR-DESSUS le cube sans être caché */
+}
+
+/* STYLE DES ONGLETS SIMPLES (Accueil, Contact) ET DU BOUTON */
+.lien-menu, .bouton-deroulant {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.lien-menu:hover, .bouton-deroulant:hover {
+    background-color: purple; /* Couleur violette au survol */
+}
+
+/* STRUCTURE DU MENU DÉROULANT */
+.onglet-deroulant {
+    position: relative;
+    display: inline-block;
+}
+
+/* LA LISTE CACHÉE PAR DÉFAUT */
+.liste-liens {
+    display: none; /* Cache la liste */
+    position: absolute;
+    background-color: #ffffff; /* Fond blanc pour la liste */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Ombre pour effet de relief */
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+/* STYLE DES LIENS À L'INTÉRIEUR DE LA LISTE */
+.liste-liens a {
+    color: #2d3748;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+/* SURVOL DES LIENS DANS LA LISTE */
+.liste-liens a:hover {
+    background-color: #f1f1f1;
+    color: purple;
+}
+
+/* S'OUVRE AU SURVOL (Ordinateur) ET AU CLIC (Android) */
+.onglet-deroulant:hover .liste-liens,
+.onglet-deroulant:focus-within .liste-liens {
+    display: block;
+}
+
+/* OPTIMISATION RESPONSIVE POUR ÉCRANS ANDROID (MOBILE) */
+@media (max-width: 500px) {
+    .menu-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .lien-menu, .bouton-deroulant {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .onglet-deroulant {
+        width: 100%;
+    }
+
+    .liste-liens {
+        position: relative; /* S'intègre dans le flux sur mobile au lieu de flotter */
+        width: 100%;
+        box-shadow: none;
+        background-color: #3d495d; /* Fond légèrement plus clair que le menu */
+        margin-top: 0;
+    }
+
+    .liste-liens a {
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .liste-liens a:hover {
+        background-color: purple;
+        color: #ffffff;
+    }
+}
+
+
+
+/* DESIGN DU CONTENEUR DE PRÉSENTATION */
+.conteneur-presentation {
+    max-width: 800px;        /* Largeur maximale de lecture confortable sur PC */
+    margin: 0 auto;          /* Centre toute la page horizontalement */
+    padding: 20px 15px;      /* Espacement interne pour les bords d'écrans Android */
+    box-sizing: border-box;
+}
+
+/* STYLE DE L'ENTÊTE (INTRODUCTION) */
+.section-introduction {
+    text-align: center;      /* Centre le titre de bienvenue */
+    margin-bottom: 40px;
+}
+
+.section-introduction h1 {
+    color: purple;           /* Reprise de votre couleur fétiche */
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.section-introduction .sous-titre {
+    color: #4a5568;          /* Gris anthracite doux */
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 0;
+}
+
+/* STYLE DES BLOCS DE TEXTE */
+.bloc-texte {
+    margin-bottom: 35px;
+}
+
+.bloc-texte h2 {
+    color: #2b4c7e;          /* Bleu Royal élégant pour les sous-titres */
+    font-size: 1.6rem;
+    border-bottom: 2px solid #f1f1f1; /* Petite ligne discrète sous le titre */
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.bloc-texte p {
+    color: #2d3748;          /* Noir/Anthracite pour une lecture facile */
+    font-size: 1.05rem;
+    line-height: 1.6;        /* Espacement de ligne confortable pour les yeux */
+    margin-bottom: 15px;
+}
+
+/* STYLE DE LA LISTE À PUCES */
+.liste-presentation {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.liste-presentation li {
+    color: #2d3748;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 10px;    /* Espace entre chaque point de la liste */
+}
+
+/* DESIGN RESPONSIVE DES FUTURES PHOTOS */
+.bloc-photo {
+    max-width: 600px;        /* Limite la taille de l'image sur grand écran */
+    margin: 30px auto;       /* Centre la photo */
+    text-align: center;
+}
+
+.bloc-photo img {
+    width: 100%;             /* S'adapte à la largeur de l'écran (PC et Android) */
+    height: auto;            /* Ne déforme pas la photo */
+    border-radius: 8px;      /* Coins légèrement arrondis */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre douce pour effet relief */
+}
+
+.legende-photo {
+    color: #718096;          /* Gris clair pour la légende */
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* AJUSTEMENTS POUR LES SMARTPHONES ANDROID */
+@media (max-width: 600px) {
+    .section-introduction h1 {
+        font-size: 1.7rem;   /* Réduit le titre principal sur mobile */
+    }
+    .bloc-texte h2 {
+        font-size: 1.3rem;   /* Réduit les sous-titres sur mobile */
+    }
+    .conteneur-presentation {
+        padding: 10px 5px;   /* Moins d'espace perdu sur les côtés */
+    }
+}
+
+/* 
+
+==========================================================================
+   9. PIED DE PAGE (FOOTER) - PRESENT SUR TOUTES LES PAGES
+   ========================================================================== */
+.pied-de-page {
+    text-align: center;
+    margin-top: 50px;       
+    padding: 20px 10px;
+    border-top: 1px solid #e2e8f0; 
+}
+
+.pied-de-page p {
+    color: #718096;         
+    font-size: 0.9rem;      
+    font-style: italic;     
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* 
+
+
+
+
+==========================================================================
+   10. DESIGN DE LA PAGE CONTACT COMPLETE (STRUCTURE EN 2 COLONNES)
+   ========================================================================== */
+.conteneur-contact {
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+
+.grille-contact {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 30px;
+    align-items: start;
+}
+
+.bloc-formulaire, .sous-bloc {
+    background-color: #f8fafc; 
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-sizing: border-box;
+}
+
+.bloc-formulaire h2, .sous-bloc h2 {
+    color: #2b4c7e;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 5px;
+}
+
+.champ { margin-bottom: 18px; }
+.champ label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #2d3748;
+    font-size: 0.95rem;
+}
+
+.champ input, .champ select, .champ textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+
+/* ==========================================================================
+   11. DESIGN DE LA PAGE EN CONSTRUCTION (ÉVOLUTION DU SITE)
+   ========================================================================== */
+.bloc-chantier {
+    max-width: 600px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style du gros émoji de chantier */
+.icone-chantier {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+/* Titre principal de la page en attente */
+.bloc-chantier h1 {
+    color: purple; /* Toujours votre couleur fil conducteur */
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* Texte explicatif sur l'évolution du site */
+.texte-evolution {
+    color: #2d3748;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Met en valeur la prochaine étape du projet */
+.texte-evolution.animateur {
+    background-color: #f7fafc;
+    padding: 15px;
+    border-left: 4px solid purple;
+    border-radius: 4px;
+    text-align: left;
+}
+
+/* Bouton pour revenir en arrière proprement */
+.bouton-retour {
+    display: inline-block;
+    background-color: #2d3748;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 25px;
+    transition: background 0.3s;
+}
+
+.bouton-retour:hover {
+    background-color: purple; /* Devient violet au survol */
+}
+
+/* Ajustement de la taille du titre sur smartphone Android */
+@media (max-width: 480px) {
+    .bloc-chantier h1 {
+        font-size: 1.5rem;
+    }
+    .icone-chantier {
+        font-size: 3rem;
+    }
+}
+
+
+/* ==========================================================================
+   12. DESIGN DU PORTFOLIO PERSONNEL / CV (PAGE 1)
+   ========================================================================== */
+
+/* FORMATION : Centre la page et crée une barrière de lecture agréable sur PC */
+.conteneur-portfolio {
+    max-width: 850px;       /* Largeur maximale du bloc de texte sur ordinateur */
+    margin: 0 auto;          /* Centre tout le contenu de la page */
+    padding: 20px 15px;      /* Sécurité d'espace pour les écrans Android */
+    box-sizing: border-box;
+}
+
+/* Zone d'en-tête (Titre et sous-titre) */
+.introduction-portfolio {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.introduction-portfolio h1 {
+    color: purple;           /* FIL CONDUCTEUR : Votre couleur violette principale */
+    font-size: 2.3rem;       /* FORMATION : Modifiez ce nombre pour agrandir/réduire le grand titre */
+    margin-bottom: 12px;
+}
+
+.introduction-portfolio .sous-titre-portfolio {
+    color: #4a5568;          /* Gris anthracite discret */
+    font-size: 1.15rem;      /* Taille du sous-titre */
+    font-style: italic;
+}
+
+/* FORMATION : Gère l'espacement entre chaque grand sujet de votre page */
+.sujet-bloc {
+    margin-bottom: 50px;     /* Crée une grande zone aérée entre le Sujet 1, le Sujet 2, etc. */
+}
+
+/* Titres de chaque sujet (Reprise du Bleu Royal de votre page d'accueil) */
+.sujet-bloc h2 {
+    color: #2b4c7e;          /* COULEUR : Bleu Royal harmonisé avec l'accueil */
+    font-size: 1.5rem;       /* Taille des titres de sujets */
+    border-bottom: 2px solid #e2e8f0; /* Ligne fine de séparation sous le titre */
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+}
+
+/* Corps des paragraphes */
+.sujet-bloc p {
+    color: #2d3748;          /* Noir/Gris très foncé optimal pour la lecture de longs textes */
+    font-size: 1.05rem;      /* Taille du texte des paragraphes */
+    line-height: 1.65;       /* FORMATION : Gère la hauteur des lignes (l'interlignage) pour reposer les yeux */
+    margin-bottom: 15px;
+}
+
+/* Style de la liste à puces des compétences */
+.liste-competences {
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.liste-competences li {
+    color: #2d3748;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 8px;      /* Espace entre chaque puce de la liste */
+}
+
+/* ==========================================================================
+   ZONES RÉSERVÉES POUR LES FUTURS MÉDIAS (PHOTOS / VIDÉOS)
+   ========================================================================== */
+.media-reserve {
+    max-width: 650px;        /* Limite la largeur de la photo/vidéo sur PC */
+    margin: 25px auto;       /* Centre le média au milieu du sujet */
+    text-align: center;
+}
+
+.media-reserve img {
+    width: 100%;             /* Rend l'image responsive (s'adapte au PC et Android) */
+    height: auto;
+    border-radius: 6px;      /* Coins légèrement arrondis */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Petite ombre légère élégante */
+}
+
+/* Conteneur fluide pour les futures intégrations de vidéos YouTube */
+.video-conteneur {
+    position: relative;
+    padding-bottom: 56.25%;  /* Ratio 16:9 standard pour les vidéos */
+    height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.video-conteneur iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.legende-media {
+    color: #718096;          /* Gris clair pour la légende sous l'image/vidéo */
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* ==========================================================================
+   BOUTON PASSERELLE VERS VOS LIENS DE CUBES
+   ========================================================================== */
+.zone-action {
+    text-align: center;      /* Centre le bouton sous le paragraphe */
+    margin-top: 20px;
+}
+
+.bouton-passerelle {
+    display: inline-block;
+    background-color: purple; /* Fond du bouton en violet */
+    color: #ffffff;           /* Texte en blanc */
+    text-decoration: none;    /* Enlève le soulignement automatique des liens */
+    padding: 12px 24px;       /* Donne de l'épaisseur au bouton (Confortable sur Android) */
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+.bouton-passerelle:hover {
+    background-color: #2b4c7e; /* Le bouton devient bleu royal au survol de la souris */
+}
+
+/* ==========================================================================
+   AJUSTEMENTS ADAPTATIFS SMARTPHONES (ANDROID)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .introduction-portfolio h1 {
+        font-size: 1.8rem;    /* Réduit le gros titre sur l'écran d'un téléphone */
+    }
+    .sujet-bloc h2 {
+        font-size: 1.3rem;    /* Réduit les sous-titres sur téléphone */
+    }
+    .conteneur-portfolio {
+        padding: 10px 8px;    /* Optimise l'espace sur les petits écrans */
+    }
+}
+
